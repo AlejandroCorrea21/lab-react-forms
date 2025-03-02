@@ -35,7 +35,6 @@ function App() {
     event.preventDefault();
     console.log("Entrega formulario ")
 
-
     {/* Nuevo estudiante con los valores del formulario*/ }
 
     const newStudent = {
@@ -49,7 +48,12 @@ function App() {
     };
 
     {/* Actualizar data nuevo estudiatne*/ }
+    const clone = [...students];
+    clone.push(newStudent)
+    console.log(clone)
+    setStudents(clone);
 
+    {/* Actualizar campos*/ }
     setFullName("");
     setImage("");
     setPhone("");
